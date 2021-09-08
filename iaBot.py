@@ -5,7 +5,6 @@ from unidecode import unidecode
 
 tk = config.token
 bot = telebot.TeleBot(tk, parse_mode=None) 
-
 def saudacao():
     hora = datetime.now().strftime('%H:%M')
     if '00:00' <= hora <= '12:00':
@@ -28,7 +27,7 @@ def send_welcome(message):
     bot.reply_to(message, "Olá!")
         
 @bot.message_handler(func=lambda m: True)
-def echo_all(message):
+def echo(message):
     sauda = saudacao()
     acc_resposta = verifica_acc()
     # Para facilitar a utilizacao do Bot remova espaços, acentos e coloque toda a frase em uppercase
