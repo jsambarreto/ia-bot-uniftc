@@ -1,8 +1,10 @@
 import telebot
-import config
+#import config
+import os
 from datetime import date, datetime
 from unidecode import unidecode
 
+tk = os.environ.get('token', None)
 
 if __name__ == "__main__":
     tk = config.token
