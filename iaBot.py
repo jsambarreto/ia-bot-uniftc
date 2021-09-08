@@ -7,7 +7,6 @@ from unidecode import unidecode
 tk = os.environ.get('token', None)
 
 if __name__ == "__main__":
-    tk = config.token
     bot = telebot.TeleBot(tk, parse_mode=None) 
     def saudacao():
         hora = datetime.now().strftime('%H:%M')
