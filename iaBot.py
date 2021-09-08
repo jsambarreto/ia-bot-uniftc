@@ -61,6 +61,8 @@ if __name__ == "__main__":
             bot.reply_to(message, 'Pesca so de peixe!.')
         elif message.text.upper().find('COLA')!=-1:
             bot.reply_to(message, 'Cola so para grudar coisas.')
+        elif message.text.upper().find('PHP')!=-1:
+            bot.reply_to(message, 'Ai, ai... Nem digo nada sobre isso.')
         
         #Bloco de respostas aos alunos
         elif message.text.upper().find('PROVA') and message.text.upper().find('DATA')!=-1:
