@@ -1,1 +1,1 @@
-web: python iaBot.py
+worker: python iaBot.py
