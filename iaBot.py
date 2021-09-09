@@ -9,7 +9,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import json
 
-FB = json.dumps(os.environ.get('FIREBASE_CREDENTIALS', None)).replace('\\n', '\n')
+FB = json.dumps(os.environ.get('FIREBASE_CREDENTIALS', None)).toString('base64')
 
 cred = credentials.Certificate(FB)
 firebase_admin.initialize_app(cred)
