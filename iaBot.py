@@ -14,7 +14,7 @@ cred = credentials.Certificate(FB)
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
-
+inc = 0
 tk = os.environ.get('token', None)
 if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
             print(unidecode(message.text).upper())
             doc_ref = db.collection(u'naorespondidas').document(u'palavra')
             doc_ref.set({
-                str(doc=+1):message.text
+                str(incremento()):message.text
             })
             
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
