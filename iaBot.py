@@ -98,14 +98,10 @@ if __name__ == "__main__":
         #Bloco sem respostas
         else:
             print(incremento())
-            #arquivo = open('naorespondidas.csv', 'a')
             print(unidecode(message.text).upper())
-            #arquivo.write(message.text)
-            #arquivo.write('\n')
-            #arquivo.close()
             doc_ref = db.collection(u'naorespondidas').document(u'palavra')
             doc_ref.set({
-                str(incremento()):message.text
+                str(doc=+1):message.text
             })
             
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
