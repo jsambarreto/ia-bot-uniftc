@@ -1,5 +1,5 @@
 import telebot
-import config
+#import config
 import os
 from datetime import date, datetime
 from unidecode import unidecode
