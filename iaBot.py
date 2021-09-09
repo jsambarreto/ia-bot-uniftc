@@ -98,7 +98,7 @@ if __name__ == "__main__":
             
         #Bloco sem respostas
         else:
-            inc = random.randint()
+            inc = random.randint(0, 999999999)
             print(unidecode(message.text).upper())
             doc_ref = db.collection(u'naorespondidas').document(u'palavra')
             doc_ref.set({
