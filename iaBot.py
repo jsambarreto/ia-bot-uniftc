@@ -27,6 +27,7 @@ if __name__ == "__main__":
         else: 
             saudacao = "Boa noite!"
         return saudacao
+    
     def incremento():
         inc =+ 1
         return inc
@@ -102,9 +103,9 @@ if __name__ == "__main__":
             #arquivo.write(message.text)
             #arquivo.write('\n')
             #arquivo.close()
-            doc_ref = db.collection(u'naorespondidas').document(message.text)
+            doc_ref = db.collection(u'naorespondidas').document(u'palavra')
             doc_ref.set({
-                u'palavra':message.text
+                u'palavras':message.text
             })
             
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
