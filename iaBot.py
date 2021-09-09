@@ -7,8 +7,9 @@ from unidecode import unidecode
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import json
 
-FB = os.environ.get('FIREBASE_CREDENTIALS', None)
+FB = json.parse(os.environ.get('FIREBASE_CREDENTIALS', None))
 
 cred = credentials.Certificate(FB)
 firebase_admin.initialize_app(cred)
