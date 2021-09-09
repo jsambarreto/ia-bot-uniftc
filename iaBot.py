@@ -7,6 +7,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import json
+import random
 
 FB = json.loads(os.environ.get('FIREBASE_CREDENTIALS', None))
 
@@ -97,11 +98,11 @@ if __name__ == "__main__":
             
         #Bloco sem respostas
         else:
-            print(incremento())
+            inc = random.randint()
             print(unidecode(message.text).upper())
             doc_ref = db.collection(u'naorespondidas').document(u'palavra')
             doc_ref.set({
-                str(incremento()):message.text
+                str(inc):message.text
             })
             
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
