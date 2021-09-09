@@ -105,7 +105,7 @@ if __name__ == "__main__":
             #arquivo.close()
             doc_ref = db.collection(u'naorespondidas').document(u'palavra')
             doc_ref.set({
-                u'palavras':message.text
+                str(incremento()):message.text
             })
             
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
