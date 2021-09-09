@@ -1,11 +1,21 @@
 import telebot
-#import config
+import config
 import os
 from datetime import date, datetime
 from unidecode import unidecode
+#import pyrebase
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
+FB = os.environ.get('FIREBASE_CREDENTIALS', None)
+
+cred = credentials.Certificate(FB)
+firebase_admin.initialize_app(cred)
+
+db = firestore.client()
 
 tk = os.environ.get('token', None)
-
 if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
     def saudacao():
@@ -83,11 +93,18 @@ if __name__ == "__main__":
             
         #Bloco sem respostas
         else:
+            doc =+ 1
+            print(doc)
             arquivo = open('naorespondidas.csv', 'a')
             print(unidecode(message.text).upper())
             arquivo.write(message.text)
             arquivo.write('\n')
             arquivo.close()
+            doc_ref = db.collection(u'naorespondidas').document(message.text)
+            doc_ref.set({
+                u'palavra':message.text
+            })
+            
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
 
     bot.polling()

@@ -1,2 +1,4 @@
 unidecode
 pyTelegramBotAPI
+pyrebase
+firebase-admin
