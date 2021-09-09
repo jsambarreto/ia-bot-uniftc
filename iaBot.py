@@ -100,9 +100,10 @@ if __name__ == "__main__":
         else:
             inc = random.randint(0, 999999999)
             print(unidecode(message.text).upper())
-            doc_ref = db.collection(u'naorespondidas').document(u'palavra')
+            doc_ref = db.collection(u'naorespondidas').document(str(inc))
             doc_ref.set({
-                str(inc):message.text
+                'id': inc,
+                'palavra':message.text
             })
             
             bot.reply_to(message, sauda + ' Estou em fase de treinamento, ainda não sei responder sobre isso, passe mensagem para o professor!')   
