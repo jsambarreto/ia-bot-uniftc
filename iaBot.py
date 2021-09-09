@@ -3,7 +3,6 @@ import telebot
 import os
 from datetime import date, datetime
 from unidecode import unidecode
-#import pyrebase
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
@@ -28,6 +27,9 @@ if __name__ == "__main__":
         else: 
             saudacao = "Boa noite!"
         return saudacao
+    def incremento():
+        inc =+ 1
+        return inc
 
     def verifica_acc():
         data_acc_1 = datetime.strptime("23/08/2021",'%d/%m/%Y')#.strftime('%d/%m/%Y')
@@ -94,13 +96,12 @@ if __name__ == "__main__":
             
         #Bloco sem respostas
         else:
-            doc =+ 1
-            print(doc)
-            arquivo = open('naorespondidas.csv', 'a')
+            print(incremento())
+            #arquivo = open('naorespondidas.csv', 'a')
             print(unidecode(message.text).upper())
-            arquivo.write(message.text)
-            arquivo.write('\n')
-            arquivo.close()
+            #arquivo.write(message.text)
+            #arquivo.write('\n')
+            #arquivo.close()
             doc_ref = db.collection(u'naorespondidas').document(message.text)
             doc_ref.set({
                 u'palavra':message.text
