@@ -2,6 +2,5 @@ unidecode
 pyTelegramBotAPI
 firebase-admin
 datetime
-os
 json
 random
