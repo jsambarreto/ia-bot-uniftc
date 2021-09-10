@@ -22,7 +22,6 @@ if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
     def saudacao():
         hora = zn.hora_zona()
-        print(hora)
         if '00:00' <= hora <= '12:00':
             saudacao = "Bom dia!"
         elif '12:01' <= hora <= '18:00':
