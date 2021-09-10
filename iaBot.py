@@ -8,7 +8,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 import json
 import random
-import utils.zone as hr
+from utils.zone import Zone as zn
 
 FB = json.loads(os.environ.get('FIREBASE_CREDENTIALS', None))
 
@@ -21,7 +21,7 @@ tk = os.environ.get('token', None)
 if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
     def saudacao():
-        hora = hr.hora()
+        hora = zn.hora_zona()
         if '00:00' <= hora <= '12:00':
             saudacao = "Bom dia!"
         elif '12:01' <= hora <= '18:00':

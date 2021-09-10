@@ -1,6 +1,6 @@
 from datetime import date,datetime,tzinfo,timedelta
 
-hora = datetime.now().strftime('%H:%M')
+#hora_atual = datetime.now().strftime('%H:%M')
 
 class Zone(tzinfo):
     def __init__(self,offset,isdst,name):
@@ -13,7 +13,7 @@ class Zone(tzinfo):
             return timedelta(hours=1) if self.isdst else timedelta(0)
     def tzname(self,dt):
          return self.name
-    def hora():
+    def hora_zona():
         BRA = Zone(-3, False, 'BRA')
         hora = datetime.now(BRA).strftime('%H:%M')
         return hora
