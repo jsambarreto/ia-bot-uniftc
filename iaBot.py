@@ -1,13 +1,14 @@
 import telebot
 #import config
 import os
-from datetime import date, datetime
+from datetime import date, datetime,tzinfo,timedelta
 from unidecode import unidecode
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import json
 import random
+import utils.zone as hr
 
 FB = json.loads(os.environ.get('FIREBASE_CREDENTIALS', None))
 
@@ -20,7 +21,8 @@ tk = os.environ.get('token', None)
 if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
     def saudacao():
-        hora = datetime.now().strftime('%H:%M')
+        hora = hr.hora()
+        print(hora)
         if '00:00' <= hora <= '12:00':
             saudacao = "Bom dia!"
         elif '12:01' <= hora <= '18:00':
