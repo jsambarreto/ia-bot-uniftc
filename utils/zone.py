@@ -1,4 +1,4 @@
-from datetime import date, datetime,tzinfo,timedelta
+from datetime import date,datetime,tzinfo,timedelta
 
 hora = datetime.now().strftime('%H:%M')
 
