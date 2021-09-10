@@ -22,7 +22,6 @@ if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
     def saudacao():
         hora = hr.hora()
-        print(hora)
         if '00:00' <= hora <= '12:00':
             saudacao = "Bom dia!"
         elif '12:01' <= hora <= '18:00':
@@ -102,6 +101,7 @@ if __name__ == "__main__":
         else:
             inc = random.randint(0, 999999999)
             print(unidecode(message.text).upper())
+            print(hr)
             doc_ref = db.collection(u'naorespondidas').document(str(inc))
             doc_ref.set({
                 'id': inc,
