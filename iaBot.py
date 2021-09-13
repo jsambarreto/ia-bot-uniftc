@@ -93,9 +93,12 @@ if __name__ == "__main__":
             bot.reply_to(message, sauda + ' Tome um cafe, veja um programa de 20 minutos do que voce gosta, depois venha estudar!')
         elif message.text.upper().find('PROVA')!=-1:
             bot.reply_to(message, sauda + ' Qual a duvida sobre a prova?')
+        elif message.text.upper().find('ME') and message.text.upper().find('AJUDA')!=-1:
+            bot.reply_to(message, sauda + 'Tome esse link, vá estudar: https://www.youtube.com/watch?v=oKu5BCZtoVc&list=PL4OAe-tL47sY1OgDs7__GJW8xBpPEeNfC&index=2')
         #Respostas acc
         elif (message.text.upper().find('ACC'))!=-1:
             bot.reply_to(message, acc_resposta)
+
             
         #Bloco sem respostas
         else:
