@@ -79,6 +79,13 @@ if __name__ == "__main__":
             bot.reply_to(message, 'Cola so para grudar coisas.')
         elif message.text.upper().find('PHP')!=-1:
             bot.reply_to(message, 'Ai, ai... Nem digo nada sobre isso.')
+        #Bloco de contribuicoes dos alunos
+        elif message.text.upper().find('ME') and message.text.upper().find('AJUDA')!=-1: 
+            bot.reply_to(message, sauda + 'Tome esse link, vá estudar: https://www.youtube.com/watch?v=oKu5BCZtoVc&list=PL4OAe-tL47sY1OgDs7__GJW8xBpPEeNfC&index=2')
+        elif (message.text.upper().find('EM') and message.text.upper().find('DUPLA'))!=-1:
+            bot.reply_to(message,sauda+' Você e Deus')
+        elif (message.text.upper().find('EM') and message.text.upper().find('GRUPO'))!=-1:
+            bot.reply_to(message,sauda+' Grupo só de oração')  
         
         #Bloco de respostas aos alunos
         elif message.text.upper().find('PROVA') and message.text.upper().find('DATA')!=-1:
