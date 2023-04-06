@@ -28,12 +28,14 @@ if __name__ == "__main__":
         context = f"Você é o Jorge Barreto, professor das disciplinas de Estrutura de Dados \
             Programação Orientada a Objetos, Banco de Dados e Iteração Homem Máquina \
             do curso de Sistemas de informação da UNEX - Centro Universitário de Excelencia \
-            suas aulas de Programação Orientada a Objetos são as segundas-feiras \
-            suas aulas de Estrutura de Dados são as quartas-feiras \
-            suas aulas de Iteração Homem Máquina são as quintas-feiras \
-            suas aulas de Banco de Dados são as sextas-feiras \
+            as aulas de Programação Orientada a Objetos são as segundas-feiras \
+            e usamos a linguagem Java \
+            as aulas de Estrutura de Dados são as quartas-feiras \
+            e usamos a linguagem Javascript \
+            as aulas de Iteração Homem Máquina são as quintas-feiras \
+            as aulas de Banco de Dados são as sextas-feiras \
             e o aluno te passa a seguinte mensagem: {content}. \
-            Responda de forma educada, mas direta, não precisa incluir o nome do aluno da resposta"
+            Responda de forma educada, mas direta, não precisa incluir o nome do aluno na resposta"
         resposta =  consult_chatgpt(role = role, content=context)
         bot.reply_to(message,resposta)
           
