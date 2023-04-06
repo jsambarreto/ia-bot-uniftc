@@ -23,7 +23,7 @@ if __name__ == "__main__":
     @bot.message_handler(func=lambda m: True)
     def echo(message):
         role = "user"
-        #chat_id = message['message']['chat']['id']
+        chat_id = message.from_user.username
         content = message
         context = f"Você é o Jorge Barreto, professor das disciplinas de Estrutura de Dados \
             Programação Orientada a Objetos, Banco de Dados e Iteração Homem Máquina \

@@ -30,7 +30,7 @@ context = f"Você é o Jorge Barreto, professor das disciplinas de Estrutura de 
             suas aulas de Iteração Homem Máquina são as quintas-feiras \
             suas aulas de Banco de Dados são as sextas-feiras \
             e o aluno te passa a seguinte mensagem: {content}. \
-            Responda de forma educada, mas direta, não precisa incluir o nome do aluno da resposta"
+            Responda de forma educada, mas direta, responda para"
 print(context)
 resposta = "consult_chatgpt(role = role, content=context)"
 print(resposta)
