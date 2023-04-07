@@ -21,7 +21,7 @@ jobs:
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
       run:
-        working-directory: app1
+        working-directory: ./
         shell: bash
 
     steps:
@@ -54,7 +54,7 @@ jobs:
       id: docker_build
       uses: docker/build-push-action@v2
       with:
-        context: ./app1
-        file: ./app1/Dockerfile
+        context: ./
+        file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/app1:${{ steps.buildnumber.outputs.build_number }}
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/:${{ steps.buildnumber.outputs.build_number }}
