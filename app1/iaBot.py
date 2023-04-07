@@ -35,7 +35,7 @@ if __name__ == "__main__":
             as aulas de Iteração Homem Máquina são as quintas-feiras \
             as aulas de Banco de Dados são as sextas-feiras \
             e o aluno te passa a seguinte mensagem: {content}. \
-            Responda de forma educada, mas direta, não precisa incluir o nome do aluno na resposta"
+            Responda de forma educada, mas direta, não precisa incluir o nome do aluno na resposta."
         resposta =  consult_chatgpt(role = role, content=context)
         bot.reply_to(message,resposta)
           
