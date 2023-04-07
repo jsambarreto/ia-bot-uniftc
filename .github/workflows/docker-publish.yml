@@ -87,7 +87,7 @@ jobs:
       # repository is public to avoid leaking data.  If you would like to publish
       # transparency data even for private images, pass --force to cosign below.
       # https://github.com/sigstore/cosign
-      - name: jsambarreto/iabottelegramgpt
+      - name: jsambarreto/iabottelegramgpt:v01.1.3
         if: ${{ github.event_name != 'pull_request' }}
         env:
           COSIGN_EXPERIMENTAL: "true"
