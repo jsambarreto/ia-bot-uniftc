@@ -12,7 +12,7 @@ from consult_chatgpt import consult_chatgpt
 from utils.zone import Zone as zn
 #from senha import token
 
-tk = os.environ['TOKEN']
+tk = os.environ.get('token')
 
 if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
