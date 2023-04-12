@@ -1,7 +1,4 @@
-unidecode
 pyTelegramBotAPI
-firebase-admin
 datetime
 requests
-gunicorn
 pytest

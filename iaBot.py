@@ -1,16 +1,9 @@
 import telebot
-#import config
 import os
 from datetime import date, datetime,tzinfo,timedelta
-from unidecode import unidecode
-#import firebase_admin
-#from firebase_admin import credentials
-#from firebase_admin import firestore
-import json
-import random
 from consult_chatgpt import consult_chatgpt
 from utils.zone import Zone as zn
-#from senha import token
+#from senha import TOKEN
 
 tk = os.environ.get('TOKEN')
 
