@@ -20,6 +20,9 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: jsambarreto/iabottelegramgpt #${{ github.repository }}
+  env:
+  API_KEY: ${{ env.API_KEY }}
+  token: ${{ env.TOKEN }}
 
 jobs:
   build:
@@ -87,6 +90,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          API_KEY: ${{ API_KEY }}
+          token: ${{ TOKEN }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 

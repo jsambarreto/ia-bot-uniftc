@@ -2,15 +2,16 @@
 FROM python:3.8-slim
 
 EXPOSE 12000
-
+ARG API_KEY
+ARG token
 # Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
 
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-ENV API_KEY=${{ env.API_KEY }}
-ENV token=${{ env.TOKEN }}
+ENV API_KEY=${API_KEY}
+ENV token=${token}
 
 # Install pip requirements
 COPY requirements.txt .
