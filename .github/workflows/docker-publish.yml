@@ -21,8 +21,8 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: jsambarreto/iabottelegramgpt #${{ github.repository }}
   env:
-  API_KEY: ${{ env.API_KEY }}
-  token: ${{ env.TOKEN }}
+  API_KEY: ${{ secrets.API_KEY }}
+  token: ${{ secrets.TOKEN }}
 
 jobs:
   build:
