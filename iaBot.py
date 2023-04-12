@@ -10,9 +10,10 @@ import json
 import random
 from consult_chatgpt import consult_chatgpt
 from utils.zone import Zone as zn
-from senha import token
+#from senha import token
 
-tk = token
+tk = os.environ['TOKEN']
+
 if __name__ == "__main__":
     bot = telebot.TeleBot(tk, parse_mode=None) 
 
