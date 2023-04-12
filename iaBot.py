@@ -23,7 +23,7 @@ if __name__ == "__main__":
     @bot.message_handler(func=lambda m: True)
     def echo(message):
         role = "user"
-        chat_id = message.from_user.username
+        #chat_id = chat.sender_chat.username
         content = message
         context = f"Você é o Jorge Barreto, professor das disciplinas de Estrutura de Dados \
             Programação Orientada a Objetos, Banco de Dados e Iteração Homem Máquina \
@@ -34,9 +34,10 @@ if __name__ == "__main__":
             e usamos a linguagem Javascript \
             as aulas de Iteração Homem Máquina são as quintas-feiras \
             as aulas de Banco de Dados são as sextas-feiras \
+            a prova da disciplina de Banco de Dados será 28/04/2023\
             e o aluno te passa a seguinte mensagem: {content}. \
             Responda de forma educada, mas direta, não precisa incluir o nome do aluno na resposta."
         resposta =  consult_chatgpt(role = role, content=context)
-        bot.reply_to(message,resposta)
+        bot.reply_to(message,f"{resposta}")
           
-    bot.polling()
+    bot.infinity_polling()
