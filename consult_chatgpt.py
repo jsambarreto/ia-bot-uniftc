@@ -16,9 +16,9 @@ def consult_chatgpt(role, content):
     body_message = json.dumps(body_message)
 
     requisicao = requests.post(link, headers=headers, data = body_message)
-    print(requisicao)
+    
     resposta = requisicao.json()
-
+    print(resposta)
     mensagem = resposta["choices"][0]["message"]["content"]
     return mensagem
 
