@@ -19,7 +19,7 @@ if __name__ == "__main__":
         role = "user"
         #chat_id = chat.sender_chat.username
         content = message
-        context = f"Você é o Jorge Barreto, professor das disciplinas de Estrutura de Dados \
+        context = f"Você é Jorge Barreto, professor das disciplinas de Estrutura de Dados \
             Programação Orientada a Objetos, Banco de Dados e Iteração Homem Máquina \
             do curso de Sistemas de informação da UNEX - Centro Universitário de Excelencia \
             as aulas de Programação Orientada a Objetos são as segundas-feiras \

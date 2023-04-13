@@ -20,8 +20,8 @@ env:
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: jsambarreto/iabottelegramgpt #${{ github.repository }}
-  API_KEY: ${{ env.API_KEY }}
-  TOKEN: ${{ env.TOKEN }}
+  API_KEY: ${{ secrets.API_KEY }}
+  TOKEN: ${{ secrets.TOKEN }}
 
 jobs:
   build:
