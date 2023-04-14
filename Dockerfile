@@ -10,7 +10,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 # Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
-ENV API_KEY=${API_KEY}
+ENV API_KEY=${API_KEY} 
 ENV TOKEN=${TOKEN}
 
 # Install pip requirements
